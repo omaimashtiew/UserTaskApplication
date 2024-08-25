@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+</head>
+<body>
+    <h1>Login</h1>
+	<form th:action="@{/login}" method="post">
+	    <div>
+	        <label for="username">Username:</label>
+	        <input type="text" id="username" name="username" />
+	    </div>
+	    <div>
+	        <label for="password">Password:</label>
+	        <input type="password" id="password" name="password" />
+	    </div>
+	    <input type="hidden" id="loginType" name="loginType" />
+	    <div>
+	        <button type="submit" onclick="document.getElementById('loginType').value='admin'">Login As Admin</button>
+	        <button type="submit" onclick="document.getElementById('loginType').value='user'">Login As User</button>
+	    </div>
+	</form>
+
+</body>
+</html>
